@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+      <head>
+      <title>Form Validation</title>
+      </head>
+      <style>
+        h2{
+           background-color: rgb(9, 34, 110);  
+           color: white;     
+        }
+        body{
+            background-color: rgb(6, 154, 223);
+            color: white;
+            margin-top: 100px;
+        }
+    
+      </style>
+<body>
+    <!--main hero section-->
+    <center>
+  <h2>Registration form</h2>
+ <form onsubmit="return validateForm()">
+ Name: <input type="text" id="name"><br><br>
+ Email: <input type="text" id="email"><br><br>
+ Phone: <input type="text" id="phone"><br><br>
+      <input type="submit" value="submit">
+</form>
+<!--main hero end-->
+</center>
+ <script>
+ function validateForm(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+
+
+ if(name==""){
+    alert("Please fill your name");
+    return false;
+ }
+if(email==""){
+    alert("Please fill your email");
+    return false;
+}
+if(phone==""){
+    alert("Please enter your mobile number");
+    return false;
+}
+    alert("form submitted successfully");
+    return true;
+ }
+
+ </script>   
+</body>
+</html>
